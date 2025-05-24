@@ -3,14 +3,31 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const dotenv = require('dotenv');
 const path = require('path');
+const bodyParser = require("body-parser");
+const morgan = require("morgan");
+const helmet = require("helmet");
 
 dotenv.config();
 
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(
+  cors({
+    origin: [
+      "http://192.168.0.147:5173",
+      "http://localhost:5173",
+      "https://www.yashgupta.engineer",
+      "https://frontend-testing-v2-1-latest.vercel.app",
+      "https://www.cgclko.com",
+    ],
+    credentials: true,
+  })
+);
 app.use(express.json());
+app.use(morgan("dev"));
+app.use(helmet());
+app.use(bodyParser.json());
 
 // Connect to MongoDB
 mongoose.connect(process.env.MONGO_URI, {})
