@@ -18,6 +18,7 @@ app.use(
       "http://192.168.0.147:5173",
       "http://localhost:5173",
       "https://quote24server.onrender.com",
+      "https://www.yashgupta.engineer",
     ],
     credentials: true,
   })
