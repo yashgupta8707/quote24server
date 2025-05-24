@@ -17,9 +17,7 @@ app.use(
     origin: [
       "http://192.168.0.147:5173",
       "http://localhost:5173",
-      "https://www.yashgupta.engineer",
-      "https://frontend-testing-v2-1-latest.vercel.app",
-      "https://www.cgclko.com",
+      "https://quote24server.onrender.com",
     ],
     credentials: true,
   })
