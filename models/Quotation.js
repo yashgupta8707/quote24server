@@ -108,10 +108,10 @@ QuotationSchema.pre('save', async function(next) {
       if (party && party.partyId) {
         if (this.version === 1) {
           // For version 1, just use quote-partyId (e.g., quote-P0001)
-          this.title = `quote-${party.partyId}`;
+          this.title = `EPC/25/${party.partyId}`;
         } else {
           // For versions > 1, use quote-partyId-V{version} (e.g., quote-P0001-V2)
-          this.title = `quote-${party.partyId}-V${this.version}`;
+          this.title = `EPC/25/${party.partyId}/V${this.version}`;
         }
       } else {
         // Fallback if party or partyId not found
