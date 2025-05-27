@@ -19,7 +19,6 @@ const ComponentSchema = new mongoose.Schema({
   },
   hsn: {
     type: String,
-    required: true
   },
   warranty: {
     type: String,
@@ -32,7 +31,6 @@ const ComponentSchema = new mongoose.Schema({
   },
   purchasePrice: {
     type: Number,
-    required: true
   },
   salesPrice: {
     type: Number,
