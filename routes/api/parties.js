@@ -40,27 +40,27 @@ router.post('/reset-sequence', partyController.resetPartySequence);
 
 module.exports = router;
 
-// server/routes/api.js - Main API router
-const express = require('express');
-const router = express.Router();
+// // server/routes/api.js - Main API router
+// const express = require('express');
+// const router = express.Router();
 
-// Import route modules
-const partyRoutes = require('./parties');
-const quotationRoutes = require('./quotations');
-const componentRoutes = require('./components');
+// // Import route modules
+// const partyRoutes = require('./parties');
+// const quotationRoutes = require('./quotations');
+// const componentRoutes = require('./components');
 
-// Use route modules
-router.use('/parties', partyRoutes);
-router.use('/quotations', quotationRoutes);
-router.use('/components', componentRoutes);
+// // Use route modules
+// router.use('/parties', partyRoutes);
+// router.use('/quotations', quotationRoutes);
+// router.use('/components', componentRoutes);
 
-// Health check endpoint
-router.get('/health', (req, res) => {
-  res.json({ 
-    status: 'OK', 
-    timestamp: new Date().toISOString(),
-    version: '2.0.0' 
-  });
-});
+// // Health check endpoint
+// router.get('/health', (req, res) => {
+//   res.json({ 
+//     status: 'OK', 
+//     timestamp: new Date().toISOString(),
+//     version: '2.0.0' 
+//   });
+// });
 
-module.exports = router;
+// module.exports = router;
