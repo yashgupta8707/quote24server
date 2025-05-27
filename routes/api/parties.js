@@ -1,7 +1,7 @@
 // server/routes/parties.js - Enhanced routes for CRM features
 const express = require('express');
 const router = express.Router();
-const partyController = require('../controllers/partyController');
+const partyController = require('../../controllers/partyController');
 
 // Middleware for authentication (implement based on your auth system)
 const authMiddleware = (req, res, next) => {
